@@ -1,0 +1,36 @@
+<div id="chatbox">
+    <button class="action-btn wide link-btn" (click)="copyLinkToClipboard()" >Copy room code</button>
+    <div #chat id="chat">
+        <ng-container >
+            <div *ngFor="let message of messages$ |async ">
+                <ng-container *ngIf="message.username==='XO BOT'; else elseBlock">
+                    <div class="message info">
+                        <small class="time">{{message.time}}</small>
+
+                        <p>{{message.text}}</p>
+                    </div>
+                </ng-container>
+                <ng-template #elseBlock>
+                    <div class="message normal">
+                        <small class="time">{{message.time}}</small>
+                        <strong class="sender">{{message.username}}</strong>
+                        <br>
+                        <p >{{message.text}}</p>
+                    </div>
+                </ng-template>
+            </div>
+        </ng-container>
+        
+     
+ 
+</div>
+<div id="chat-buttons"> 
+    <textarea type="text" [(ngModel)]="input"  #inputElement id="textarea" placeholder="say something...">
+    </textarea>
+    <button  (click)="sendMessage()" id="send-btn">📧 Send</button> 
+
+</div>
+
+<div id="snackbar" [ngClass]="{'show' : snackbarToggle}">Room ID has been copied into your clipboard</div> 
+
+</div>

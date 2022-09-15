@@ -1,0 +1,27 @@
+    <app-chat class="app-chat"></app-chat>
+    <table id="board" [ngClass]="{'disabled': (myTurn$ |async) !== true}">
+        <tr>
+            <td #square id="square-1" class="square" (click)="makeMove(1)" (mouseover)="showWithHoverStyle(1)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==1 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==1 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(1)==='X'), 'occupiedO' : (getSquareValue(1)==='O')}">1</td>
+            <td #square id="square-2" class="square" (click)="makeMove(2)" (mouseover)="showWithHoverStyle(2)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==2 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==2 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(2)==='X'), 'occupiedO' : (getSquareValue(2)==='O')}">2</td>
+            <td #square id="square-3" class="square"  (click)="makeMove(3)" (mouseover)="showWithHoverStyle(3)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==3 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==3 && (symbol$ |async)=='O') ,  'occupiedX' : (getSquareValue(3)==='X'), 'occupiedO' : (getSquareValue(3)==='O')}">3</td>
+        </tr>
+        <tr>
+            <td #square id="square-4" class="square" (click)="makeMove(4)" (mouseover)="showWithHoverStyle(4)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==4 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==4 && (symbol$ |async)=='O') , 'occupiedX' : (getSquareValue(4)==='X'), 'occupiedO' : (getSquareValue(4)==='O')}">4</td>
+            <td #square id="square-5" class="square" (click)="makeMove(5)" (mouseover)="showWithHoverStyle(5)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==5 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==5 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(5)==='X'), 'occupiedO' : (getSquareValue(5)==='O')}">5</td>
+            <td #square id="square-6" class="square"  (click)="makeMove(6)" (mouseover)="showWithHoverStyle(6)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==6 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==6 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(6)==='X'), 'occupiedO' : (getSquareValue(6)==='O')}">6</td>
+        </tr>
+        <tr>
+            <td #square id="square-7" class="square" (click)="makeMove(7)" (mouseover)="showWithHoverStyle(7)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==7 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==7 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(7)==='X'), 'occupiedO' : (getSquareValue(7)==='O')}">7</td>
+            <td #square id="square-8" class="square" (click)="makeMove(8)" (mouseover)="showWithHoverStyle(8)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==8 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==8 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(8)==='X'), 'occupiedO' : (getSquareValue(8)==='O')}">8</td>
+            <td #square id="square-9" class="square" (click)="makeMove(9)" (mouseover)="showWithHoverStyle(9)" 
+            (mouseout)="showWithDefaultStyle()" [ngClass]="{'hoveredX' : (hovered_square_id==9 && (symbol$ |async)=='X') , 'hoveredO' : (hovered_square_id==9 && (symbol$ |async)=='O'), 'occupiedX' : (getSquareValue(9)==='X'), 'occupiedO' : (getSquareValue(9)==='O')}">9</td>
+        </tr>
+    </table>

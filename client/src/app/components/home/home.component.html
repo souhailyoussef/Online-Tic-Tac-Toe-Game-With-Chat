@@ -1,0 +1,21 @@
+
+<h1>LOGIN</h1>
+
+<form  action="submit">
+<div class="field">
+    <input type="text" placeholder="Username" required id="username" [formControl]="username">
+</div>
+</form>
+
+<div class="field">
+    <input type="text" placeholder="Room code" id="join-input" [(ngModel)]="roomUrl">
+    <br>
+    <br>
+    <button class="action-btn wide" (click)="joinRoom()" id="join-btn" [disabled]="!username.valid || !roomUrl" >join room</button> 
+</div>
+OR 
+<br>
+<div class="field">
+    <button class="action-btn wide" (click)="createRoom()" [disabled]="!username.valid" >create room</button> 
+</div>
+

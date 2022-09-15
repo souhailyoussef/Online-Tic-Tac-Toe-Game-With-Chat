@@ -1,0 +1,13 @@
+<ng-container *ngIf="errorType==='fullRoom'; else elseBlock">
+    <h1>403</h1>
+    <h2>This Room Is Already Full...</h2>
+</ng-container>
+<ng-template #elseBlock>
+    <h1>404</h1>
+    <h2>Page Not Found...</h2>
+</ng-template>
+
+<img src="./../../../assets/404.jpg" alt="404" id="error-img">
+<h1>
+    <a href="" style="color:dodgerblue">Go home</a>
+</h1>
